@@ -1,0 +1,80 @@
+{
+   "satellites": [
+        {
+            "name": "TELKOMSAT 113BT",
+            "sat_id": "58995"
+        },
+        {
+            "name": "NUSANTARA TIGA",
+            "sat_id": "57045"
+        },
+        {
+            "name": "NUSANTARA SATU",
+            "sat_id": "44048"
+        },
+        {
+            "name": "TELKOM-4",
+            "sat_id": "43587"
+        },
+        {
+            "name": "TELKOM 3S",
+            "sat_id": "41944"
+        },
+        {
+            "name": "LAPAN A3",
+            "sat_id": "41603"
+        },
+        {
+            "name": "BRISAT",
+            "sat_id": "41591"
+        },
+        {
+            "name": "LAPAN A2 (IO-86)",
+            "sat_id": "40931"
+        },
+        {
+            "name": "PALAPA D",
+            "sat_id": "35812"
+        },
+        {
+            "name": "LAPAN-TUBSAT",
+            "sat_id": "29709"
+        },
+        {
+            "name": "TELKOM 2",
+            "sat_id": "28902"
+        },
+        {
+            "name": "GARUDA 1",
+            "sat_id": "26089"
+        },
+        {
+            "name": "TELKOM 1",
+            "sat_id": "25880"
+        },
+        {
+            "name": "INDOSTAR 1",
+            "sat_id": "25050"
+        },
+        {
+            "name": "PALAPA C2",
+            "sat_id": "23864"
+        },
+        {
+            "name": "PALAPA B4",
+            "sat_id": "21964"
+        },
+        {
+            "name": "PALAPA B1",
+            "sat_id": "14134"
+        },
+        {
+            "name": "PALAPA 2",
+            "sat_id": "9862"
+        },
+        {
+            "name": "PALAPA 1",
+            "sat_id": "9009"
+        }
+    ]
+}
