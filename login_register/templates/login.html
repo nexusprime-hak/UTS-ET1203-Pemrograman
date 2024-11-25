@@ -10,15 +10,16 @@
     <div class="container">
         <h1>Welcome Back!</h1>
         <p>Log in to access your satellite tracking dashboard.</p>
-        <form action="#" method="post">
+        <form action="/login" method="post">
             <label for="username">Username</label>
             <input type="text" id="username" name="username" placeholder="Enter your username" required>
-
+        
             <label for="password">Password</label>
             <input type="password" id="password" name="password" placeholder="Enter your password" required>
-
+        
             <button type="submit">Log In</button>
         </form>
+        
         <p class="switch-page">
             Don't have an account? <a href="/register">Register here</a>.
         </p>
