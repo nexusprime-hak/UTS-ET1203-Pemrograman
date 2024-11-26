@@ -282,3 +282,23 @@ a:hover {
     opacity: 1;
 }
 
+/* Background for Login and Register Pages */
+body.login-page, body.register-page {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Container Styling for Login/Register */
+.container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 400px;
+}
