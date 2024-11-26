@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satellite Tracker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header class="hero-section">
+        <div class="content-container">
+            <h1>Experience Real-Time Satellite Tracking</h1>
+            <p>Discover advanced tools and insights for monitoring satellites, tailored to your needs.</p>
+            <form action="/search" method="get" class="search-bar">
+                <input type="text" name="query" placeholder="Search satellites, services, or features" required>
+                <button type="submit">Search</button>
+            </form>
+            <div class="cta-buttons">
+                <a href="#" class="btn-primary">Get Started</a>
+                <a href="#" class="btn-secondary">Learn More</a>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="{{ url_for('static', filename='satellite-illustration.png') }}" alt="Satellite Illustration">
+        </div>
+    </header>
+
+    <section class="trusted-brands">
+        <h2>Trusted by:</h2>
+        <div class="brand-logos">
+            <img src="{{ url_for('static', filename='google-logo.png') }}" alt="Google">
+            <img src="{{ url_for('static', filename='nasa-logo.png') }}" alt="NASA">
+            <img src="{{ url_for('static', filename='spacex-logo.png') }}" alt="SpaceX">
+            <img src="{{ url_for('static', filename='esa-logo.png') }}" alt="ESA">
+        </div>
+    </section>
+</body>
+</html>

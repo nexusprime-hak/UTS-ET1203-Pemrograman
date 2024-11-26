@@ -48,8 +48,8 @@ def register_user():
         flash('Username or email already exists!', 'error')
         return redirect(url_for('register'))
 
-    # Hash the password for security
-    hashed_password = generate_password_hash(password, method='sha256')
+    # Hash the password with a valid method
+    hashed_password = generate_password_hash(password, method='pbkdf2:sha256')
 
     # Save new user to the database
     new_user = User(username=username, email=email, password=hashed_password)
@@ -71,7 +71,11 @@ def login_user():
         return redirect(url_for('login'))
 
     flash(f'Welcome, {username}!', 'success')
-    return redirect(url_for('login'))
+    return redirect(url_for('homepage'))
+
+@app.route('/homepage')
+def homepage():
+    return render_template('homepage.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
