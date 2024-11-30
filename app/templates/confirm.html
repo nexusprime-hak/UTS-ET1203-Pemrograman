@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Confirm Email</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #d0c9c9; /* Soft gray background */
+    }
+
+    .background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('https://i.imgur.com/Jh7dPdO.jpg'); /* Replace with the actual background image */
+      background-size: cover;
+      background-position: center;
+      z-index: -1;
+    }
+
+    .confirm-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #cbd3c3; /* Soft greenish-gray background */
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      width: 320px;
+      text-align: center;
+      border: 2px solid #3776a8; /* Light blue border */
+    }
+
+    .confirm-container h1 {
+      margin: 0;
+      color: #435b6d; /* Muted blue-gray for header text */
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .confirm-button {
+      display: inline-block;
+      padding: 10px 20px;
+      margin-top: 15px;
+      border: none;
+      border-radius: 10px;
+      background-color: #81939e; /* Grayish blue background for button */
+      color: white;
+      font-size: 14px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .confirm-button:hover {
+      background-color: #6a7e8c; /* Slightly darker shade for hover */
+    }
+  </style>
+</head>
+<body>
+  <div class="background"></div>
+  <div class="confirm-container">
+    <h1>Confirm Email</h1>
+    <a href="#" class="confirm-button">Confirm One-Time Code</a>
+  </div>
+</body>
+</html>
+
+<!--Replace the placeholder URL (https://i.imgur.com/Jh7dPdO.jpg) in the .background CSS property with the URL or file path of the actual background image you want to use.
+The design includes a centered container with a border and a call-to-action button.
+Adjust colors, dimensions, or styling as needed to refine the appearance.-->

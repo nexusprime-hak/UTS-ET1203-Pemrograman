@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #d0c9c9; /* Soft gray background */
+  }
+
+  .background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/bg login.jpg'); /* Replace with the actual background image */
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+  }
+
+  .login-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #d7c2c2; /* Soft pinkish background */
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    text-align: center;
+  }
+
+  .login-container h1 {
+    margin: 0;
+    color: #2e4a60; /* Dark blue-gray for the header text */
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .input-field {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    background-color: #81939e; /* Grayish blue background for the inputs */
+    color: white;
+    font-size: 14px;
+  }
+
+  .input-field::placeholder {
+    color: #d0d7dd; /* Lighter text for placeholders */
+  }

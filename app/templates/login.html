@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Satellite Tracker</title>
+  <link rel="stylesheet" href = "{{ url_for('static', filename='css/login.css') }}">
+  <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/satellite favicon.png') }}">
+</head>
+<body>
+  <div class="background"></div>
+  <div class="login-container">
+    <h1>Welcome Back!</h1>
+        <p>Log in to access your satellite tracking dashboard.</p>
+        <form action="/login" method="post">
+            <input class="input-field" type="text" id="username" name="username" placeholder="Username" required>
+            <input class="input-field" type="password" id="password" name="password" placeholder="Password" required>
+            <button type="submit">Log In</button>
+        </form>
+        <p>Don't have an account? <a href="/register">Register here</a>.</p>
+  </div>
+</body>
+</html>
+
+<!--Notes:''
+Replace the placeholder URL (https://i.imgur.com/Wc0LRWW.jpg) in the .background CSS property with the URL or path of the image you uploaded.
+The layout and colors are adapted based on the image provided. Feel free to tweak the dimensions, colors, and styles as needed.-->

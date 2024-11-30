@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satellite Tracker</title>
+    <link href="{{ url_for('static', filename='css/entrypage.css') }}" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/satellite favicon.png') }}">
+</head>
+
+<body>
+    <div class="container">
+        <div class="cloud"></div>
+        <div class="title">
+            <h1>Satellite Tracker</h1>
+        </div>
+        <div class="button-container">
+            <form action="{{ url_for('logout') }}">
+                <button type="submit" class="btn">Logout</a>
+            </form>
+        </div>
+        <div class="content-box">
+            <div class="box-left">
+                <h2>Satellite Map Widget</h2>
+                <script>
+                    var norad_n2yo = '{{ norad_n2yo | safe }}';  // Inject parsed satellite data
+                    var size_n2yo = '{{ size_n2yo }}';
+                    var allpasses_n2yo = '{{ allpasses_n2yo }}';
+                    var map_n2yo = '{{ map_n2yo }}';
+                </script>
+            
+                <!-- External JavaScript for widget -->
+                <script type="text/javascript" src="https://www.n2yo.com/js/widget-tracker.js"></script>
+
+                <div class="box-right">
+                    <h1>Satellite Board Info</h1>
+                    <form id="satellite-form" method="post">
+                        <label for="satellite">Select a satellite:</label>
+                        <select name="satellite" id="satellite">
+                            <option value="">Choose a satellite</option>
+                            {% for satellite in satellites %}
+                            <option value="{{ satellite }}">{{ satellite }}</option>
+                            {% endfor %}
+                        </select>
+                    </form>
+                    <div id="satellite-info"></div>
+                    <script src="{{ url_for ('static', filename='js/dynamic_board.js')}}"></script>
+                </div>
+            </div>
+        </div>
+        <img src="{{ url_for('static', filename='images/satelit icon.png') }}" alt="Satellite Left" class="satellite satellite-left">
+        <img src="{{ url_for('static', filename='images/satelit icon.png') }}" alt="Satellite Right" class="satellite satellite-right">
+    </div>
+    <div class="footer">
+        <p>
+            NZYO API menyediakan data real-time pelacakan satelit, termasuk posisi lintasan, prediksi penampakan, dll. API ini memerlukan API key untuk akses. Dengan kuota terbatas untuk setiap permintaan. Website ini dibuat untuk memperkenalkan satelit yang dimiliki Indonesia kepada masyarakat. 
+            <a href="https://www.n2yo.com" style="color: #ffffff; text-decoration: underline;">https://www.n2yo.com</a>
+        </p>
+    </div>
+</body>
+
+</html>
+
+<!--Explanation
+Container: The main wrapper for the page, centered with padding.
+Title: The top section with a gradient background and a larger font size.
+Buttons: Simple button styles with hover effects for interactions.
+Content Boxes: Two boxes to display data, styled with borders and rounded corners.
+Footer: Contains additional information about the NZYO API.
+Cloud and Satellite Images: The cloud class for the background and satellite classes are placeholders for decorative images.
+Images
+To complete the design, you'll need:
+
+A cloud image for the background (clouds.png).
+Two satellite images (satellite-left.png and satellite-right.png).
+Place the images in the same directory as your HTML file or adjust the paths in the url() function accordingly.-->
