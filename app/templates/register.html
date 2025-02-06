@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Page Page</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/register.css') }}">
+  <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/satellite favicon.png') }}">
+</head>
+<body>
+  <div class="background"></div>
+  <div class="register-container">
+    <h1>Register</h1>
+    <form method="POST" action="/register">
+      <input type="email"name="email" class="input-field" placeholder="Email" />
+      <input type="text" name="username" class="input-field" placeholder="Username" />
+      <input type="password" name="password" class="input-field" placeholder="Password" />
+      <input type="password" name="confirm_password" class="input-field" placeholder="Confirm Password" />
+      <button type="submit" value="Register">Register</button>
+    </form>
+    <p>Already have an account? <a href="/login">Login</a></p>
+  </div>
+</body>
+</html>
+
+<!--Replace the placeholder URL (https://i.imgur.com/xxGZMSL.jpg) in the .background CSS property with the URL or file path of the image provided.
+Colors, fonts, and positioning are matched based on the image. You can adjust the layout further if needed.-->

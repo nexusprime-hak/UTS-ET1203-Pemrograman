@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
+import json
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'
@@ -16,6 +17,7 @@ class User(db.Model):
     username = db.Column(db.String(100), nullable=False, unique=True)
     email = db.Column(db.String(100), nullable=False, unique=True)
     password = db.Column(db.String(200), nullable=False)
+    
 
 # Create database tables
 with app.app_context():
@@ -73,9 +75,7 @@ def login_user():
     flash(f'Welcome, {username}!', 'success')
     return redirect(url_for('homepage'))
 
-@app.route('/homepage')
-def homepage():
-    return render_template('homepage.html')
+@app.route('/satellite')
 
 if __name__ == '__main__':
     app.run(debug=True)

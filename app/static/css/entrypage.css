@@ -1,0 +1,166 @@
+body, html {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #688fc4, #eaeff5);
+}
+
+
+
+/* Container for the page content */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers the boxes horizontally */
+    align-items: center; /* Aligns boxes at the top */
+    padding: 20px; /* Space between the two boxes */
+    max-width: 90%; /* Adjust the container's width */
+    margin: 20px auto; /* Center the container on the page 
+    flex-wrap: wrap; */
+}
+
+#satellite-info {
+    margin-top: 20px;
+    padding: 10px;
+    background: #f5f7fb;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#satellite-info h2 {
+    margin-bottom: 10px;
+}
+
+#satellite-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+#satellite-info p {
+    margin-bottom: 5px;
+    font-size: 1rem;
+    text-align: left;
+}
+
+
+/* Title and background styles */
+.title {
+    background: #739ab1;
+    color: white;
+    font-weight: bold;
+    font-size: 32px;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    /* position: relative; */
+}
+
+/* Button styles */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.button {
+    background-color: #d6f0ff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0 10px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #aad8ff;
+}
+
+/* Boxes to display content */
+.content-box {
+    /*
+    flex: 1 1 calc(50% - 20px); /* Ensures two boxes share the row equally 
+    max-width: 45%; /* Prevents the boxes from stretching too wide 
+    height: auto; /* Allow height to adjust based on content 
+    background-color: #e0d4d4;
+    border: 2px solid #5c9fcc;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    */
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 20px auto;
+    gap: 20px;
+}
+
+/* Footer with additional information */
+.footer {
+    background: #739ab1;
+    color: white;
+    padding: 10px;
+    font-size: 12px;
+    margin-top: 40px;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Decorative cloud styles */ 
+.cloud {
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url('clouds.png') no-repeat center top;
+    background-size: cover;
+}
+
+/* Satellite styles */
+.satellite {
+    position: absolute;
+}
+
+.satellite-left {
+    top: 150px;
+    left: 10%;
+    width: 50px;
+    transform: rotate(-15deg);
+}
+
+.satellite-right {
+    top: 350px;
+    right: 10%;
+    width: 50px;
+    transform: rotate(15deg);
+}
+
+.box-left, .box-right {
+    flex: 1;
+    background: #d9c7c7;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.box-left {
+    background: #f5f7fb;
+}
+
+.box-right {
+    background: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex: 1 1 100%; /* Each box takes up the full width */
+        flex-direction: column;
+        gap: 10px;
+
+    }
+}
